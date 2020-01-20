@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Button, Input } from '@material-ui/core'
+import { Button, Input, Typography } from '@material-ui/core'
 import firebase from 'firebase'
 import { useCollection } from 'react-firebase-hooks/firestore'
 import { initializeFirebase } from '../service/firebase'
@@ -15,28 +15,34 @@ function Home() {
   const [text, setText] = useState<string>('')
   const [actions, loading, error] = useCollection(
     fdb
-      .collection('user')
+      .collection('users')
       .doc(userId)
       .collection('actions')
   )
-
-  console.log(actions?.docs)
+  // actions?.docs.map(
 
   return (
     <div>
-      <Input
-        value={text}
-        onChange={e => {
-          setText(e.target.value)
-        }}
-      ></Input>
-      <Button
-        onClick={() => {
-          console.log('log')
-        }}
-      >
-        記録
-      </Button>
+      {actions?.docs.map(action => {
+        return (
+          <div>
+            <Typography>{action.data().name}</Typography>
+            <Input
+              value={text}
+              onChange={e => {
+                setText(e.target.value)
+              }}
+            ></Input>
+            <Button
+              onClick={() => {
+                console.log('log')
+              }}
+            >
+              記録
+            </Button>
+          </div>
+        )
+      })}
     </div>
   )
 }
