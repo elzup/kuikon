@@ -4534,10 +4534,10 @@ firebase@7.14.4:
     "@firebase/storage" "0.3.33"
     "@firebase/util" "0.2.46"
 
-firestore-simple@5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/firestore-simple/-/firestore-simple-5.0.1.tgz#22eb3dcd891d36f05e975a99a6517b371a67b3cd"
-  integrity sha512-7JCtgWvhFxiUqi0IUAXFxQA+zuHAmKKsJZEgiA/Y4MqXQt5nqIpMdOPEzI9iOPNzB4kJEDbJQVbLdoIDyMxG5Q==
+firestore-simple@6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/firestore-simple/-/firestore-simple-6.0.1.tgz#7bd19fe559d8c44d5f6d9d5ac0839fff5c680628"
+  integrity sha512-g1kmBXPSNQItSzbN6Klo0uIgyNPFr0K8mw2uC1dZG1yelzgvNqk9Fk0MY9g+8scn0PQEq7ZWPfFbRprTJfUkdg==
   dependencies:
     utility-types "3.10.0"
 
